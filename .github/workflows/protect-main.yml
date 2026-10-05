@@ -1,0 +1,18 @@
+name: Protect Main Branch
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  protect-main-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify user permission to push to main
+        run: |
+          if [ "${GITHUB_ACTOR}" != "oriolcortes" ]; then
+            echo "❌ Direct push to main is not allowed for ${GITHUB_ACTOR}."
+            exit 1
+          else
+            echo "✅ Direct push to main is allowed for ${GITHUB_ACTOR}."
+          fi

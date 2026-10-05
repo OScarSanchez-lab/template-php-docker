@@ -1,0 +1,24 @@
+# CODEOWNERS — protect .github, .vscode and root-level config files
+
+# Entire .github (workflows, issue templates, etc.)
+
+/.github/** @oriolcortes
+
+# Entire .vscode (editor settings, tasks, extensions)
+
+/.vscode/** @oriolcortes
+
+# ---------------------------
+
+# Root-level config files
+
+# ---------------------------
+
+/.editorconfig @oriolcortes
+/.env.example @oriolcortes
+/.gitattributes @oriolcortes
+/.gitignore @oriolcortes
+/.prettierrc @oriolcortes
+/docker-compose.yml @oriolcortes
+/Dockerfile @oriolcortes
+/LICENSE @oriolcortes
